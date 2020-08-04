@@ -1,15 +1,17 @@
-import React from 'react';
+import {React,useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ThemeProvider } from '@material-ui/core/styles'; 
-import theme from './theme';
+import {darkTheme,lightTheme} from './theme';
+
+const [darkMode, setDarkMode] = useState(true);
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-    <App />
+    <ThemeProvider theme={darkMode?darkTheme:lightTheme}>
+    <App darkMode/>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

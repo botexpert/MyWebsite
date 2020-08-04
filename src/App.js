@@ -2,14 +2,16 @@ import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import ScrollTop from './components/ScrollTop';
+import MainDiv from './components/MainDiv';
+import { Paper } from '@material-ui/core';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar/>
-      <p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
+    <Paper>
+      <NavBar darkMode/>
+        <MainDiv/>
       <ScrollTop/>
-    </div>
+    </Paper>
   );
 }
 
